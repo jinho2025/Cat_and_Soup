@@ -182,10 +182,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Event.c" />
-    <ClCompile Include="Interaction.c" />
-    <ClCompile Include="Main.c" />
-    <ClCompile Include="Main_Cat_and_Soup.c" />
+    <ClCompile Include="Event.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">Private.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Interaction.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">Private.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Main.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">Private.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Main_Cat_and_Soup.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">Private.h</PrecompiledHeaderFile>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cat_and_Soup.h" />

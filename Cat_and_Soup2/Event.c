@@ -195,7 +195,7 @@ void KaitoEvent() {
 	d[2] = rand() % 10;
 	d[3] = rand() % 10;
 	//printf("%d%d%d%d\n", d[0], d[1], d[2], d[3]);
-	for (int i = 6; ~i; i--) {
+	for (int i = 4; ~i; i--) {
 		printf("남은 기회 %d\n|    |\b\b\b\b\b", i);
 		scanf_s("%d", &num);
 		r[0] = (num / 1000) % 10;
