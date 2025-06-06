@@ -1,10 +1,10 @@
 #include"Private.h"
 
-static INPUT_RECORD inputbuffer[128];
-static DWORD temp;
+static int temp;
 
 
 void LoanEvent() {
+	INPUT_RECORD inputbuffer[128];
 	system("cls");
 	int count = 7;
 	int per = 0;
@@ -55,9 +55,9 @@ ENDLOOP:;
 	return;
 }
 
-DWORD PrintChoiceList(DWORD dwlength, ...) {
+int PrintChoiceList(int dwlength, ...) {
 	va_list str;
-	register DWORD i, r;
+	register int i, r;
 	va_start(str, dwlength);
 	char* list[5] = { 0 };
 	list[(r = rand() % dwlength)] = va_arg(str, char*);
@@ -73,7 +73,7 @@ DWORD PrintChoiceList(DWORD dwlength, ...) {
 
 void SphinxEvent() {
 	#define QUIZ_LENGTH 7
-	register int d1, d2, d3, d4;
+	int d1, d2, d3, d4;
 	int q;
 	int quizlist[QUIZ_LENGTH];
 	for (temp = QUIZ_LENGTH - 1; ~temp; temp--) {
@@ -188,8 +188,8 @@ void KaitoEvent() {
 	printf("냥도: 훔치러온 보물이다.\n"
 		"      이런 보안으로 잠겨있다니.\n"
 		"      어이 조수 이거 풀어.\n\n");
-	DWORD d[4], num, r[4], e[4];
-	BOOL flag;
+	int d[4], num, r[4], e[4];
+	int flag;
 	d[0] = rand() % 10;
 	d[1] = rand() % 10;
 	d[2] = rand() % 10;
