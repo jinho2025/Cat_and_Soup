@@ -428,7 +428,7 @@ LOOP:;
 
 void Cat_and_Soup_Event() {
 	system("cls");
-	return;
+
 	if (eventcounter == 3) {
 		switch (rand() % NUMBEROFEVENT) {
 			case 0:
